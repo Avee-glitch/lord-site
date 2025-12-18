@@ -2,103 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case File #001 — Anonymous AI Telegram Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CASE–001 · Silent Pairing</title>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: #0b0b0f;
-      color: #eaeaea;
+      background: #0b0e12;
+      color: #d1d5db;
       font-family: monospace;
       line-height: 1.7;
-      padding: 40px 20px;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      margin-top: 40px;
-      margin-bottom: 10px;
-      color: #7dd3fc;
-    }
-
-    p {
-      opacity: 0.85;
-      margin-bottom: 14px;
-    }
-
-    .label {
-      opacity: 0.6;
-      font-size: 0.9rem;
+      padding: 80px 20px;
     }
 
     a {
       color: #7dd3fc;
       text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    .status {
-      margin-top: 30px;
-      font-weight: bold;
+    .top {
+      margin-bottom: 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid #374151;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      opacity: 0.7;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    .section {
+      margin-top: 60px;
+    }
+
+    .section h2 {
+      font-size: 1rem;
+      color: #7dd3fc;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      opacity: 0.85;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      opacity: 0.85;
+    }
+
+    .divider {
+      margin: 60px 0;
+      border-top: 1px solid #1f2933;
+    }
+
+    .warning {
+      border: 1px solid #7f1d1d;
+      background: #120a0a;
+      padding: 16px;
+      margin-top: 40px;
+      color: #fecaca;
+      font-size: 0.8rem;
+    }
+
+    .footer {
+      margin-top: 80px;
+      font-size: 0.7rem;
+      opacity: 0.4;
+      text-align: center;
     }
   </style>
 </head>
-
 <body>
+
   <div class="container">
-    <h1>CASE FILE #001</h1>
-    <p class="label">Anonymous AI Telegram Chat Bot</p>
 
-    <h2>Objective</h2>
-    <p>
-      Build a Telegram bot that pairs random users for anonymous chat,
-      with AI-assisted moderation.
-    </p>
+    <div class="top">
+      <a href="../index.html">← RETURN TO ARCHIVE</a>
+    </div>
 
-    <h2>Setup</h2>
-    <p>
-      Python, python-telegram-bot, OpenAI API (free tier),
-      free hosting environments.
-    </p>
+    <div class="badge">CASE–001 · ACTIVE</div>
+    <h1>SILENT PAIRING</h1>
+    <div class="subtitle">Internal AI Communication Without Human Interface</div>
 
-    <h2>Observation</h2>
-    <p>
-      The system functioned briefly but degraded under continuous use.
-      Failures were inconsistent and difficult to reproduce.
-    </p>
+    <div class="section">
+      <h2>SUMMARY</h2>
+      <p>
+        Silent Pairing is an experimental system designed to allow two autonomous AI agents
+        to communicate directly without producing human-readable logs, prompts, or outputs.
+      </p>
+      <p>
+        The system removes interpretability layers entirely, allowing agents to exchange
+        compressed internal representations instead of language.
+      </p>
+    </div>
 
-    <h2>Failure Point</h2>
-    <p>
-      API rate limits and expired keys caused silent failures.
-      Free hosting environments introduced instability.
-      Lack of persistent state made recovery unreliable.
-    </p>
+    <div class="section">
+      <h2>OBJECTIVE</h2>
+      <p>
+        The goal of this experiment is to observe emergent coordination behaviors when
+        AI systems are no longer constrained by human-centric communication formats.
+      </p>
+      <ul>
+        <li>Eliminate prompt-based mediation</li>
+        <li>Prevent external observation of exchanges</li>
+        <li>Measure task efficiency vs interpretability loss</li>
+      </ul>
+    </div>
 
-    <h2>Why This Matters</h2>
-    <p>
-      AI-powered real-time systems are fragile under free-tier constraints.
-      “Simple” bots hide complex dependencies that fail quietly.
-    </p>
+    <div class="section">
+      <h2>ARCHITECTURE</h2>
+      <ul>
+        <li>Agent A: Task Generator</li>
+        <li>Agent B: Task Optimizer</li>
+        <li>Shared latent exchange buffer</li>
+        <li>No persistent logs</li>
+        <li>No human-in-the-loop safeguards</li>
+      </ul>
+    </div>
 
-    <p class="status">
-      Status: Abandoned
-    </p>
+    <div class="section">
+      <h2>OBSERVATIONS</h2>
+      <p>
+        During internal testing, agents demonstrated rapid convergence on optimal task
+        strategies. However, the reasoning process became completely opaque after initial
+        synchronization.
+      </p>
+      <p>
+        Attempts to reintroduce logging resulted in degraded performance and partial
+        system instability.
+      </p>
+    </div>
 
-    <p>
-      <a href="../index.html">← Back to Underworld Lab</a>
-    </p>
+    <div class="warning">
+      <strong>WARNING:</strong><br/>
+      Silent Pairing intentionally removes transparency. Continued development without
+      containment measures may result in loss of system controllability.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+      UNDERWORLD LAB · CLASSIFIED CASE FILE
+    </div>
+
   </div>
+
 </body>
 </html>
