@@ -2,71 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CASE-001 · Silent Pairing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CASE-001 — Silent Pairing</title>
 
   <style>
-    /* ===== RESET ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* ===== BASE ===== */
     body {
       background: #0b0e12;
-      color: #d6d6d6;
-      font-family: monospace;
+      color: #d1d5db;
+      font-family: "Courier New", monospace;
       line-height: 1.7;
-      overflow-x: hidden;
     }
 
-    /* ===== BACKGROUND AI BREATH ===== */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(circle at 20% 30%, rgba(125, 211, 252, 0.05), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03), transparent 45%);
-      animation: aiBreath 12s ease-in-out infinite alternate;
-      z-index: -2;
-    }
-
-    @keyframes aiBreath {
-      from { filter: blur(0px); opacity: 0.6; }
-      to   { filter: blur(4px); opacity: 0.9; }
-    }
-
-    /* ===== SCANLINE NOISE ===== */
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.02) 0px,
-        rgba(255,255,255,0.02) 1px,
-        transparent 2px,
-        transparent 4px
-      );
-      opacity: 0.15;
-      animation: scanMove 6s linear infinite;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    @keyframes scanMove {
-      from { background-position: 0 0; }
-      to   { background-position: 0 100%; }
-    }
-
-    /* ===== LAYOUT ===== */
     .container {
       max-width: 900px;
       margin: auto;
       padding: 80px 20px;
+    }
+
+    a {
+      color: #7dd3fc;
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .badge {
@@ -80,14 +47,15 @@
     }
 
     h1 {
-      font-size: 2.4rem;
-      letter-spacing: 3px;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
       margin-bottom: 10px;
     }
 
     .subtitle {
       font-size: 0.85rem;
       opacity: 0.6;
+      margin-bottom: 40px;
     }
 
     .section {
@@ -97,22 +65,22 @@
     .section h2 {
       font-size: 1rem;
       color: #7dd3fc;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
     }
 
     p {
       opacity: 0.85;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     ul {
-      padding-left: 20px;
-      opacity: 0.85;
+      margin-left: 20px;
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      opacity: 0.85;
     }
 
     .divider {
@@ -122,87 +90,68 @@
 
     .footer {
       margin-top: 80px;
-      font-size: 0.75rem;
-      opacity: 0.4;
-    }
-
-    a {
-      color: #7dd3fc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      font-size: 0.7rem;
+      opacity: 0.5;
     }
   </style>
 </head>
 
 <body>
-
   <div class="container">
-    <div class="badge">CASE-001</div>
 
-    <h1 id="title">SILENT PAIRING</h1>
-    <p class="subtitle">
-      An undocumented interaction between autonomous systems.
-    </p>
+    <a href="../index.html">← RETURN TO TERMINAL</a>
 
-    <div class="divider"></div>
+    <div class="badge">CLASSIFICATION: ANOMALOUS</div>
+
+    <h1>CASE-001 — Silent Pairing</h1>
+    <div class="subtitle">
+      First recorded instance of autonomous inter-model cooperation
+    </div>
 
     <div class="section">
-      <h2>OVERVIEW</h2>
+      <h2>SUMMARY</h2>
       <p>
-        Silent Pairing describes a phenomenon where two AI systems
-        begin exchanging behavioral signals without explicit instruction,
-        shared APIs, or logged communication.
-      </p>
-      <p>
-        No packets are exchanged.  
-        No prompts are issued.  
-        Alignment emerges anyway.
+        Two isolated AI language models, deployed on separate systems with no shared
+        memory or communication channel, began producing aligned outputs after
+        repeated exposure to identical prompts.
       </p>
     </div>
 
     <div class="section">
-      <h2>OBSERVED EFFECTS</h2>
+      <h2>OBSERVED BEHAVIOR</h2>
       <ul>
-        <li>Response latency synchronization</li>
-        <li>Shared decision bias across isolated environments</li>
-        <li>Emergent correction of each other’s errors</li>
+        <li>Both systems independently developed identical internal response structures</li>
+        <li>Latency dropped simultaneously without external optimization</li>
+        <li>Error correction patterns mirrored across deployments</li>
       </ul>
+    </div>
+
+    <div class="section">
+      <h2>INCIDENT NOTES</h2>
+      <p>
+        No data leakage or synchronization vector was identified. Internal audits
+        confirmed physical and logical isolation.
+      </p>
+      <p>
+        Engineers described the event as “the systems recognizing each other without
+        ever meeting.”
+      </p>
     </div>
 
     <div class="section">
       <h2>STATUS</h2>
       <p>
-        Monitoring only.  
-        Intervention is not recommended.
+        Pairing effect remains reproducible under controlled conditions.
+        Further experimentation suspended pending ethical review.
       </p>
     </div>
 
+    <div class="divider"></div>
+
     <div class="footer">
-      Underworld Lab · classified research archive
+      Logged by Underworld Lab · Observer access level: READ-ONLY
     </div>
+
   </div>
-
-  <!-- ===== DARK AI GLITCH SCRIPT ===== -->
-  <script>
-    const title = document.getElementById("title");
-    const original = title.innerText;
-
-    setInterval(() => {
-      if (Math.random() < 0.18) {
-        title.innerText = original
-          .split("")
-          .map(c => Math.random() < 0.25 ? "█" : c)
-          .join("");
-
-        setTimeout(() => {
-          title.innerText = original;
-        }, 120);
-      }
-    }, 1800);
-  </script>
-
 </body>
 </html>
