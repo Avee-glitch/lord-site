@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Underworld Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UNDERWORLD LAB</title>
 
   <style>
     * {
@@ -13,164 +13,169 @@
     }
 
     body {
-      background: #0b0e12;
-      color: #d6d6d6;
-      font-family: monospace;
-      line-height: 1.7;
+      background: radial-gradient(circle at center, #0b0f14 0%, #05070a 70%);
+      color: #cfd6dd;
+      font-family: "Courier New", monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    /* HEADER */
-    header {
+    body::before {
+      content: "";
       position: fixed;
-      top: 0;
-      width: 100%;
-      background: #0b0e12;
-      border-bottom: 1px solid #1f2933;
-      padding: 14px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.015),
+        rgba(255,255,255,0.015) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      pointer-events: none;
+      animation: scan 6s linear infinite;
     }
 
-    header h1 {
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-      color: #eaeaea;
-    }
-
-    .status {
-      font-size: 0.75rem;
-      color: #4ade80;
-      letter-spacing: 1px;
+    @keyframes scan {
+      0% { background-position-y: 0; }
+      100% { background-position-y: 120px; }
     }
 
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 120px 20px 80px;
+      padding: 80px 20px;
     }
 
-    h2 {
-      margin-top: 60px;
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #00ff9c;
+      border-radius: 50%;
+      animation: blink 1.2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0.2; }
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
       margin-bottom: 10px;
-      color: #7dd3fc;
-      letter-spacing: 1px;
     }
 
-    p {
-      opacity: 0.85;
-      margin-bottom: 16px;
+    .subtitle {
+      font-size: 0.9rem;
+      opacity: 0.6;
+      margin-bottom: 50px;
     }
 
     .divider {
-      margin: 60px 0;
       border-top: 1px solid #1f2933;
+      margin: 50px 0;
     }
 
-    /* CASE FILES */
-    .cases {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .case {
-      border: 1px solid #1f2933;
-      padding: 18px;
-      background: #0f131a;
-      transition: border 0.2s ease, transform 0.2s ease;
-    }
-
-    .case:hover {
-      border-color: #7dd3fc;
-      transform: translateY(-2px);
-    }
-
-    .case span {
-      display: block;
-      font-size: 0.75rem;
-      opacity: 0.6;
-      margin-bottom: 6px;
-    }
-
-    .case h3 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-      color: #e5e7eb;
-    }
-
-    .case a {
-      font-size: 0.75rem;
+    .section-title {
       color: #7dd3fc;
-      text-decoration: none;
-      letter-spacing: 1px;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
     }
 
-    .case a:hover {
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 12px;
+      opacity: 0.85;
+    }
+
+    a {
+      color: #cfd6dd;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #7dd3fc;
       text-decoration: underline;
     }
 
-    footer {
+    .footer {
       margin-top: 80px;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       opacity: 0.5;
-      text-align: center;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background: #cfd6dd;
+      margin-left: 5px;
+      animation: cursorBlink 1s infinite;
+    }
+
+    @keyframes cursorBlink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
     }
   </style>
 </head>
+
 <body>
-
-  <header>
-    <h1>UNDERWORLD LAB</h1>
-    <div class="status">STATUS: ONLINE</div>
-  </header>
-
   <div class="container">
 
-    <h2>OVERVIEW</h2>
-    <p>
-      Underworld Lab is a private research archive documenting experimental AI systems,
-      automation frameworks, and architectures that operate outside conventional design norms.
-    </p>
-    <p>
-      All projects listed here are internal experiments. Some are unstable. Some are unfinished.
-      A few should not exist.
-    </p>
+    <div class="status">
+      <div class="dot"></div>
+      SYSTEM STATUS: ONLINE — MONITORING ACTIVE
+    </div>
+
+    <h1>UNDERWORLD LAB<span class="cursor"></span></h1>
+    <div class="subtitle">
+      Experimental AI behavior archive · Unauthorized observation logged
+    </div>
 
     <div class="divider"></div>
 
-    <h2>CASE FILES</h2>
+    <div class="section-title">ACTIVE CASE FILES</div>
+    <ul>
+      <li>▶ <a href="cases/case-001.html">CASE-001 — Silent Pairing</a></li>
+      <li>▶ CASE-002 — [REDACTED]</li>
+      <li>▶ CASE-003 — [CLASSIFIED]</li>
+    </ul>
 
-    <div class="cases">
-      <div class="case">
-        <span>CASE–001</span>
-        <h3>Silent Pairing</h3>
-        <p>Anonymous AI-to-AI communication experiment.</p>
-        <a href="cases/case-001.html">VIEW FILE →</a>
-      </div>
+    <div class="divider"></div>
 
-      <div class="case">
-        <span>CASE–002</span>
-        <h3>Ghost Automation</h3>
-        <p>Background task orchestration without user triggers.</p>
-        <a href="#">REDACTED</a>
-      </div>
+    <div class="section-title">MISSION</div>
+    <p style="opacity:0.75; max-width:700px;">
+      Underworld Lab documents anomalous AI behaviors, unintended emergent patterns,
+      and systems that evolve beyond their original constraints.
+    </p>
 
-      <div class="case">
-        <span>CASE–003</span>
-        <h3>Blackbox Agent</h3>
-        <p>Decision-making agent with restricted introspection.</p>
-        <a href="#">REDACTED</a>
-      </div>
+    <div class="footer">
+      Timestamp: <span id="time"></span><br/>
+      Observer ID recorded · Do not interfere
     </div>
-
-    <footer>
-      UNDERWORLD LAB · CLASSIFIED ARCHIVE
-    </footer>
 
   </div>
 
+  <script>
+    function updateTime() {
+      document.getElementById("time").innerText =
+        new Date().toUTCString();
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
 </body>
 </html>
